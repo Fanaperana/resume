@@ -1,0 +1,145 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[margin=0.45in, top=0.35in, bottom=0.35in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{parskip}
+\usepackage[T1]{fontenc}
+\usepackage{marvosym}
+
+\definecolor{darkgray}{HTML}{333333}
+\definecolor{medgray}{HTML}{666666}
+
+\hypersetup{colorlinks=true, urlcolor=darkgray, linkcolor=black}
+
+\pagestyle{empty}
+
+\newcommand{\sectionbox}[1]{%
+    \noindent\colorbox{black}{\parbox{\dimexpr\textwidth-2\fboxsep\relax}{\textcolor{white}{\strut\hspace{2pt}\normalsize\bfseries\MakeUppercase{#1}}}}%
+}
+\titleformat{\section}
+    {\normalsize\bfseries}
+    {}
+    {0pt}
+    {\sectionbox}
+\titlespacing{\section}{0pt}{6pt}{4pt}
+
+\newcommand{\entry}[4]{%
+    \noindent\textbf{#1} \hfill \textcolor{darkgray}{\textit{#2}} \\[-2pt]
+    \textit{#3} \hfill \textcolor{medgray}{#4}\par
+}
+
+\newcommand{\skillcat}[2]{\textbf{#1:} #2}
+
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+%---------- HEADER ----------%
+\begin{center}
+    {\fontsize{20}{24}\selectfont\bfseries PRINCE RALAMBOMANARIVO}\\[3pt]
+    {\normalsize Software Engineer \textbar\ Systems Architect \textbar\ AI Researcher}\\[5pt]
+    {\small\textcolor{darkgray}{%
+        \Telefon\ +1 (267) 648-8013 $\mid$
+        \Letter\ \href{mailto:fanaperanaprince@gmail.com}{fanaperanaprince@gmail.com} $\mid$
+        Fort Wayne, IN%
+    }}\\[2pt]
+    {\small\textcolor{darkgray}{%
+        \colorbox{black}{\textcolor{white}{\scriptsize\bfseries\,GH\,}}\ \href{https://github.com/Fanaperana}{github.com/Fanaperana} \quad$\mid$\quad
+        \colorbox{black}{\textcolor{white}{\scriptsize\bfseries\,in\,}}\ \href{http://linkedin.com/in/prince-fanaperana}{linkedin.com/in/prince-fanaperana} \quad$\mid$\quad
+        \colorbox{black}{\textcolor{white}{\scriptsize\bfseries\,W\,}}\ \href{https://fanaperana.github.io/portfolio}{fanaperana.github.io/portfolio}%
+    }}
+\end{center}
+
+\vspace{-4pt}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{-2pt}
+
+%---------- SUMMARY ----------%
+\section{Professional Summary}
+\vspace{-2pt}
+{\small Software Engineer and Systems Architect with 6+ years of experience designing, building, and shipping production software across healthcare, AI, and systems infrastructure. Architected enterprise-scale data pipelines, agentic AI systems with planner/tool-loop execution, and cross-platform desktop applications compiled from Rust to WebAssembly. Maintainer of 40+ open-source projects. Strong track record of owning features end-to-end in HIPAA-regulated environments, from database optimization to deployment.}
+
+%---------- EXPERIENCE ----------%
+\section{Experience}
+
+\entry{Software Developer}{May 2022 -- Present}{Medical Informatics Engineering}{Fort Wayne, IN}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=12pt, itemsep=0pt, topsep=1pt, parsep=0pt]
+    \small
+    \item Architect and ship features end-to-end across healthcare platforms serving enterprise clients --- patient records, immunization registries, occupational health, and compliance reporting modules
+    \item Design and optimize complex SQL pipelines against MariaDB/MySQL databases, reducing query latency on reporting workflows handling millions of medical records
+    \item Build and maintain full-stack applications (TypeScript, JavaScript, modern frameworks) powering clinical data entry, form rendering, and cross-system integrations
+    \item Own developer tooling and workflow automation --- built internal CLI tools to streamline Git/PR workflows and accelerate team velocity across Azure DevOps
+    \item Enforce HIPAA compliance at the code level; conduct security-aware code reviews and maintain annual InfoSec certifications
+\end{itemize}
+
+\vspace{2pt}
+\entry{Software Developer \& IT Architect}{Jan 2020 -- Jan 2025}{Rockdiva Nails Salon \& Spa}{Fort Wayne, IN}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=12pt, itemsep=0pt, topsep=1pt, parsep=0pt]
+    \small
+    \item Architected full web presence from scratch --- booking system, responsive site, and backend infrastructure
+    \item Managed network architecture, server provisioning, and ongoing system administration
+\end{itemize}
+
+\vspace{2pt}
+\entry{Software Engineering Intern}{May 2021 -- Aug 2021}{Parkview Mirro Center for Research and Innovation}{Fort Wayne, IN}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=12pt, itemsep=0pt, topsep=1pt, parsep=0pt]
+    \small
+    \item Designed and built a secure web application integrating Twilio APIs to facilitate real-time communication between clinicians and patients
+    \item Shipped production-quality code within regulated medical software development lifecycles
+\end{itemize}
+
+\vspace{2pt}
+\entry{Software Developer \& Multimedia Engineer}{Jan 2019 -- May 2022}{Purdue University Fort Wayne -- StudioM}{Fort Wayne, IN}
+\vspace{-2pt}
+\begin{itemize}[leftmargin=12pt, itemsep=0pt, topsep=1pt, parsep=0pt]
+    \small
+    \item Built internal tools and automated production workflows for university media departments
+    \item Developed 90+ After Effects CEP extension tools for motion graphics pipelines
+\end{itemize}
+
+%---------- SKILLS ----------%
+\section{Technical Skills}
+\vspace{-1pt}
+{\small
+\skillcat{Languages}{Rust, TypeScript, Python, C, C++, Zig, Go, Java, C\#, SQL, PHP, Dart, HTML/CSS}\\[2pt]
+\skillcat{AI \& ML}{Agentic AI Systems, PyTorch, HuggingFace, LLM Integration (OpenAI, Anthropic, Ollama), LangChain, RAG, MCP, Whisper ASR, Fine-Tuning}\\[2pt]
+\skillcat{Web \& Apps}{Svelte 5, React, Vue, Next.js, Angular, Tauri 2, Electron, Laravel, Django, Flask, Axum, Node.js, Vite, WebGL}\\[2pt]
+\skillcat{Systems}{Rust/WASM (wasm-pack), Wayland, Linux Kernel, Buildroot, Custom OS Images, x86\_64 Bare-Metal, FPGA, GPU/CUDA}\\[2pt]
+\skillcat{Data \& Infra}{MySQL, MariaDB, MongoDB, Firebase, SurrealDB, Docker, Kubernetes, Git, Azure DevOps, GitHub Actions, CI/CD}\\[2pt]
+\skillcat{Embedded}{ESP32, RP2040/RP2350, ESP-IDF, BLE, SPI/I2C, KiCad, Altium, PCB Design}
+}
+
+%---------- EDUCATION ----------%
+\section{Education}
+\vspace{1pt}
+\textbf{Bachelor of Science in Computer Science} \hfill \textcolor{medgray}{May 2022}\\[-2pt]
+{\small\textit{Purdue University, Fort Wayne}}
+
+%---------- CERTS, AWARDS & LANGUAGES ----------%
+\section{Certifications, Awards \& Languages}
+\vspace{-2pt}
+{\small
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=12pt, itemsep=0pt, topsep=0pt, parsep=0pt]
+    \item C \& C++ Certification
+    \item HIPAA Privacy \& Security (annual)
+    \item Security Awareness Training (ISAT)
+    \item HealthCare InfoSec \& Privacy Practitioner
+    \item Outstanding Leadership Award -- PFW
+    \item Certificate of Merit -- ELS
+\end{itemize}
+\end{multicols}
+\vspace{-6pt}
+\textbf{English} (Bilingual) \quad$\mid$\quad \textbf{French} (Bilingual) \quad$\mid$\quad \textbf{Malagasy} (Native)
+}
+
+\end{document}
